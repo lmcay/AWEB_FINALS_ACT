@@ -1,0 +1,67 @@
+
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+    <h2 class="text-2xl font-bold mb-4 text-center">Login Form</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label for="fullName" class="block font-medium">Full Name</label>
+        <input class="input-box w-full" type="text" id="fullName" formControlName="fullName" placeholder="Enter your full name">
+        <div *ngIf="loginForm.controls['fullName'].invalid && loginForm.controls['fullName'].touched" class="text-red-500 text-sm">
+          Full name is required.
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block font-medium">Email</label>
+        <input class="input-box w-full" type="email" id="email" formControlName="email" placeholder="Enter your email">
+        <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched" class="text-red-500 text-sm">
+          Enter a valid email address.
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="phone" class="block font-medium">Phone</label>
+        <input class="input-box w-full" type="tel" id="phone" formControlName="phone" placeholder="Enter your phone number">
+        <div *ngIf="loginForm.controls['phone'].invalid && loginForm.controls['phone'].touched" class="text-red-500 text-sm">
+          Enter a valid 10-digit phone number.
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-4">
+        <label for="password" class="block font-medium">Password</label>
+        <input class="input-box w-full" type="password" id="password" formControlName="password" placeholder="Enter your password">
+        <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" class="text-red-500 text-sm">
+          Password must be at least 6 characters long.
+        </div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="mb-4">
+        <label for="confirmPassword" class="block font-medium">Confirm Password</label>
+        <input class="input-box w-full" type="password" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm your password">
+        <div *ngIf="loginForm.controls['confirmPassword'].invalid && loginForm.controls['confirmPassword'].touched" class="text-red-500 text-sm">
+          Passwords must match.
+        </div>
+      </div>
+
+      <button class="btn w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 disabled:bg-gray-400" type="submit" [disabled]="loginForm.invalid">
+        Submit
+      </button>
+    </form>
+
+    <div *ngIf="submittedData" class="mt-6 p-4 border rounded bg-gray-50">
+      <h3 class="text-lg font-semibold mb-2">Submitted Data:</h3>
+      <p class="text-sm text-gray-700"><strong>Full Name:</strong> {{ submittedData.fullName }}</p>
+      <p class="text-sm text-gray-700"><strong>Email:</strong> {{ submittedData.email }}</p>
+      <p class="text-sm text-gray-700"><strong>Phone:</strong> {{ submittedData.phone }}</p>
+      <p class="text-sm text-gray-700"><strong>Password:</strong> ********</p> <!-- Hide password for security -->
+    </div>    
+    <br>
+    <h2 class="text-center">Luis Miguel Cayanan | WD-302 </h2>
+  </div>
+  
+</div>
+
+<router-outlet></router-outlet>
