@@ -12,10 +12,15 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'template_driven';
-  anytext: string = "";
+  formData = {
+    username: '',
+    email: '',
+    password: '',
+    age: null
+  };
   submitted: boolean = false;
 
-  onSubmit(){
+  onSubmit() {
     this.submitted = true;
   }
 }
