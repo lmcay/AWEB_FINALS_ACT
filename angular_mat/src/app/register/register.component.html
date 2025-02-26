@@ -60,7 +60,7 @@
         </mat-slider>
       </div>
       
-      <button mat-raised-button color="primary" type="submit" [disabled]="!formdata.valid">Click Here</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!formdata.valid">Submit</button>
   
       <p *ngIf="submitted">
         You have entered: <br>
@@ -73,8 +73,6 @@
         Angular Skill Level: {{ angularSkillLevel }} <br>
       </p>
 
-
-      <button mat-raised-button type="submit" [disabled]="!formdata.valid">Submit</button>
     </form>
 </div>
   
