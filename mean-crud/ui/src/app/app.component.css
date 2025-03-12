@@ -1,0 +1,100 @@
+/* General Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title Styling */
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input Fields Styling */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  /* Button Styling */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Books List Styling */
+  h3 {
+    font-size: 1.2rem;
+    background-color: #e9ecef;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 b {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  h3 .mb {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: auto;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Footer Styling */
+  .text-center {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 20px;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+  

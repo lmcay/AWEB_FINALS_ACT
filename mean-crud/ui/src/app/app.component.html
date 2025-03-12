@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Books Application</h1>
+  
+  <input id="newBook" placeholder="Enter a title">
+  <!-- <input id="newTitle" placeholder="title"> -->
+  
+  <input id="newDesc" placeholder="Enter a description">
+  <input id="newPrice" placeholder="Enter book price">
+  <button (click)="addBook()">Add book</button>
+  <h3 *ngFor="let book of books">
+    <b>* Title: {{book.title}}</b>
+    <b>* Description: {{book.desc}}</b>
+    <b class="mb">* Price: {{book.price}}</b>  
+    <button (click)="deleteBook(book.id)">Delete book</button>
+  </h3>
+  <p class="text-center">Mady by: Luis Miguel Cayanan | WD-302</p>
+</div>
